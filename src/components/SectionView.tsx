@@ -1,3 +1,4 @@
+import { ReactElement } from 'react'
 import Bio from './Bio'
 import Experience from './Experience'
 import Projects from './Projects'
@@ -9,7 +10,7 @@ interface SectionViewProps {
   onBack: () => void
 }
 
-const sectionContent: Record<string, JSX.Element> = {
+const sectionContent: Record<string, ReactElement> = {
   bio: <Bio />,
   experience: <Experience />,
   projects: <Projects />,
