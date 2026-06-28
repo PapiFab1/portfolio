@@ -27,7 +27,7 @@ const certifications = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-gray-950 text-white py-16 sm:py-28 px-6 border-t border-white/5">
+    <section id="skills" className="text-white py-16 sm:py-28 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center gap-4 mb-8 sm:mb-14">
           <div className="h-px w-8 bg-blue-500" />

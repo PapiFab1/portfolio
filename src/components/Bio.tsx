@@ -1,6 +1,6 @@
 export default function Bio() {
   return (
-    <section id="bio" className="bg-gray-950 text-white py-16 sm:py-28 px-6">
+    <section id="bio" className="text-white py-16 sm:py-28 px-6">
       <div className="max-w-3xl mx-auto">
         <div className="flex items-center gap-4 mb-10">
           <div className="h-px w-8 bg-blue-500" />

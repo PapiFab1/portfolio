@@ -24,7 +24,7 @@ const jobs = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-gray-950 text-white py-16 sm:py-28 px-6 border-t border-white/5">
+    <section id="experience" className="text-white py-16 sm:py-28 px-6">
       <div className="max-w-3xl mx-auto">
         <div className="flex items-center gap-4 mb-8 sm:mb-14">
           <div className="h-px w-8 bg-blue-500" />
