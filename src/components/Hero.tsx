@@ -31,17 +31,17 @@ export default function Hero({ onNavigate }: HeroProps) {
       <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/10 to-black/85" />
       <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
 
-      {/* Content centered, nudged slightly left */}
+      {/* Centered on mobile, nudged left on sm+ */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="flex flex-col -translate-x-[8%]">
+        <div className="flex flex-col sm:-translate-x-[8%]">
 
           {/* 1. Portfolio label */}
-          <p className="text-white text-xs tracking-[0.6em] uppercase mb-5 font-medium">
+          <p className="text-white text-xs tracking-[0.6em] uppercase mb-3 sm:mb-5 font-medium">
             — Portfolio
           </p>
 
           {/* 2. Name */}
-          <h1 className="text-6xl sm:text-7xl font-black text-white leading-none tracking-tight mb-2">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight mb-2">
             Jonathan<br />Fabien
           </h1>
 
@@ -51,7 +51,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           </p>
 
           {/* 4. Nav menu */}
-          <nav className="flex flex-col mt-10" onMouseLeave={() => setHovered(null)}>
+          <nav className="flex flex-col mt-6 sm:mt-10" onMouseLeave={() => setHovered(null)}>
             {menuItems.map((item) => {
               const isActive = item.id === activeId
               return (
@@ -59,9 +59,9 @@ export default function Hero({ onNavigate }: HeroProps) {
                   key={item.id}
                   onClick={() => onNavigate(item.id)}
                   onMouseEnter={() => setHovered(item.id)}
+                  className={isActive ? 'p3-nav-active' : 'p3-nav-inactive'}
                   style={{
                     fontFamily: "'Anton', sans-serif",
-                    fontSize: isActive ? '3rem' : '1.35rem',
                     color: 'white',
                     opacity: isActive ? 1 : 0.5,
                     letterSpacing: '0.04em',
@@ -81,14 +81,12 @@ export default function Hero({ onNavigate }: HeroProps) {
                   {isActive && (
                     <span
                       aria-hidden="true"
+                      className="p3-para-back"
                       style={{
                         position: 'absolute',
                         background: '#e8001c',
-                        width: '290px',
-                        height: '74px',
                         top: '50%',
                         left: '-16px',
-                        marginTop: '-37px',
                         transform: 'rotate(-12deg)',
                       }}
                     />
@@ -96,14 +94,12 @@ export default function Hero({ onNavigate }: HeroProps) {
                   {isActive && (
                     <span
                       aria-hidden="true"
+                      className="p3-para-front"
                       style={{
                         position: 'absolute',
                         background: '#ff2d78',
-                        width: '255px',
-                        height: '74px',
                         top: '50%',
                         left: '-38px',
-                        marginTop: '-37px',
                         transform: 'rotate(-12deg)',
                       }}
                     />
@@ -115,7 +111,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           </nav>
 
           {/* 5. Social links */}
-          <div className="flex items-center gap-4 mt-10">
+          <div className="flex items-center gap-4 mt-6 sm:mt-10">
             <a
               href="https://github.com/PapiFab1"
               target="_blank"

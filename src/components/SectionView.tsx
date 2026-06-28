@@ -23,7 +23,7 @@ export default function SectionView({ section, onBack }: SectionViewProps) {
     <div className="h-screen overflow-y-auto" style={{ background: '#080f1a' }}>
       {/* Sticky header — click name to go back */}
       <div
-        className="sticky top-0 z-10 px-8 py-4 flex items-center gap-4 border-b border-white/5"
+        className="sticky top-0 z-10 px-4 sm:px-8 py-4 flex items-center gap-4 border-b border-white/5"
         style={{ background: 'rgba(8, 15, 26, 0.92)', backdropFilter: 'blur(8px)' }}
       >
         <button

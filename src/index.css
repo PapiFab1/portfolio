@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+/* Responsive P3R nav font sizes */
+.p3-nav-active   { font-size: 2.2rem; }
+.p3-nav-inactive { font-size: 1.1rem; }
+
+@media (min-width: 640px) {
+  .p3-nav-active   { font-size: 3rem; }
+  .p3-nav-inactive { font-size: 1.35rem; }
+}
+
+/* Responsive parallelogram sizes */
+.p3-para-back  { width: 200px; height: 58px; margin-top: -29px; }
+.p3-para-front { width: 170px; height: 58px; margin-top: -29px; }
+
+@media (min-width: 640px) {
+  .p3-para-back  { width: 290px; height: 74px; margin-top: -37px; }
+  .p3-para-front { width: 255px; height: 74px; margin-top: -37px; }
+}

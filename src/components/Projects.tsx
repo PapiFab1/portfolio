@@ -17,9 +17,9 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-gray-950 text-white py-28 px-6 border-t border-white/5">
+    <section id="projects" className="bg-gray-950 text-white py-16 sm:py-28 px-6 border-t border-white/5">
       <div className="max-w-5xl mx-auto">
-        <div className="flex items-center gap-4 mb-14">
+        <div className="flex items-center gap-4 mb-8 sm:mb-14">
           <div className="h-px w-8 bg-blue-500" />
           <p className="text-blue-400 text-xs tracking-[0.5em] uppercase font-medium">Projects</p>
         </div>
@@ -32,7 +32,7 @@ export default function Projects() {
               target="_blank"
               rel="noreferrer"
               style={{ clipPath: 'polygon(0 0, calc(100% - 18px) 0, 100% 100%, 0 100%)' }}
-              className="group relative block p-7 bg-gray-900 hover:bg-blue-600
+              className="group relative block p-5 sm:p-7 bg-gray-900 hover:bg-blue-600
                          border-l-[3px] border-blue-500/40 hover:border-transparent
                          transition-colors duration-200"
             >
